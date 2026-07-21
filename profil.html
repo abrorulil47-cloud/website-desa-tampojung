@@ -1,130 +1,237 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Desa | Desa [Nama Desa]</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Profil Desa | Desa Tampojung Tenggina</title>
+    <meta name="description" content="Profil lengkap Desa Tampojung Tenggina: sejarah, visi misi, geografis, demografi, dan lembaga desa.">
     <link href="style.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-
 <body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
     <!-- Header -->
     <header class="bg-white shadow sticky top-0 z-50">
-        <div class="container mx-auto flex items-center justify-between py-4 px-6">
-            <div class="flex items-center space-x-3">
-                <img src="https://images.unsplash.com/photo-1558005530-a7958896ec60?auto=format&fit=crop&w=48&q=80" alt="Logo Desa" class="h-12 w-12 rounded-full">
-                <div>
-                    <h1 class="text-xl font-bold">Desa [Nama Desa]</h1>
-                    <p class="text-sm text-gray-500">Bersama membangun desa yang mandiri dan sejahtera</p>
-                </div>
-            </div>
-            <!-- Hamburger button for mobile/tablet -->
-            <button id="menu-toggle" class="lg:hidden flex items-center px-3 py-2 border rounded text-green-700 border-green-700 focus:outline-none" aria-label="Toggle Menu">
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-            <!-- Desktop Navigation -->
-            <nav class="hidden lg:flex gap-6">
-                <a href="index.html" class="hover:text-green-600 font-medium">Beranda</a>
-                <a href="profil.html" class="hover:text-green-600 font-medium text-green-700 font-bold">Profil Desa</a>
-                <a href="pemerintahan.html" class="hover:text-green-600 font-medium">Pemerintahan</a>
-                <a href="layanan-publik.html" class="hover:text-green-600 font-medium">Layanan Publik</a>
-                <a href="berita-pengumuman.html" class="hover:text-green-600 font-medium">Berita & Pengumuman</a>
-                <a href="galeri.html" class="hover:text-green-600 font-medium">Galeri</a>
-                <a href="kontak.html" class="hover:text-green-600 font-medium">Kontak</a>
+        <div class="container mx-auto flex items-center justify-between py-3 px-6">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <div class="h-12 w-12 rounded-full bg-gradient-to-br from-green-700 to-green-500 flex items-center justify-center text-white font-bold text-lg shadow-lg">TT</div>
+                <div><h1 class="text-lg font-bold text-gray-800 group-hover:text-green-700 transition-colors">Desa Tampojung Tenggina</h1><p class="text-xs text-gray-500">Kec. Waru, Kab. Pamekasan</p></div>
+            </a>
+            <button id="menu-toggle" class="lg:hidden flex items-center px-3 py-2 border rounded text-green-700 border-green-700" aria-label="Toggle Menu"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+            <nav class="hidden lg:flex items-center gap-1">
+                <a href="index.html" class="px-3 py-2 rounded-lg hover:text-green-600 hover:bg-green-50 font-medium text-sm">Beranda</a>
+                <a href="profil.html" class="px-3 py-2 rounded-lg text-green-700 font-bold bg-green-50 text-sm">Profil Desa</a>
+                <a href="pemerintahan.html" class="px-3 py-2 rounded-lg hover:text-green-600 hover:bg-green-50 font-medium text-sm">Pemerintahan</a>
+                <a href="potensi-desa.html" class="px-3 py-2 rounded-lg hover:text-green-600 hover:bg-green-50 font-medium text-sm">Potensi Desa</a>
+                <a href="kegiatan-kkn.html" class="px-3 py-2 rounded-lg hover:text-green-600 hover:bg-green-50 font-medium text-sm">Kegiatan KKN</a>
+                <a href="galeri.html" class="px-3 py-2 rounded-lg hover:text-green-600 hover:bg-green-50 font-medium text-sm">Galeri</a>
+                <a href="kontak.html" class="px-3 py-2 rounded-lg hover:text-green-600 hover:bg-green-50 font-medium text-sm">Kontak</a>
             </nav>
         </div>
-        <!-- Mobile/Tablet Navigation -->
-        <nav id="mobile-menu" class="lg:hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50 hidden">
-            <div class="bg-white w-4/5 max-w-xs h-full shadow-lg p-6 flex flex-col gap-4 animate-slideInLeft">
-                <button id="menu-close" class="self-end mb-4 text-gray-700" aria-label="Tutup Menu">
-                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-                <a href="index.html" class="hover:text-green-600 font-medium">Beranda</a>
-                <a href="profil.html" class="hover:text-green-600 font-medium text-green-700 font-bold">Profil Desa</a>
-                <a href="pemerintahan.html" class="hover:text-green-600 font-medium">Pemerintahan</a>
-                <a href="layanan-publik.html" class="hover:text-green-600 font-medium">Layanan Publik</a>
-                <a href="berita-pengumuman.html" class="hover:text-green-600 font-medium">Berita & Pengumuman</a>
-                <a href="galeri.html" class="hover:text-green-600 font-medium">Galeri</a>
-                <a href="kontak.html" class="hover:text-green-600 font-medium">Kontak</a>
+        <nav id="mobile-menu" class="lg:hidden fixed top-0 left-0 w-full h-full bg-black/50 z-50 hidden">
+            <div class="bg-white w-4/5 max-w-xs h-full shadow-lg p-6 flex flex-col gap-3 animate-slideInLeft">
+                <button id="menu-close" class="self-end mb-2 text-gray-700 p-1" aria-label="Tutup Menu"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+                <a href="index.html" class="px-3 py-2 rounded-lg hover:bg-green-50 font-medium">Beranda</a>
+                <a href="profil.html" class="px-3 py-2 rounded-lg text-green-700 font-bold bg-green-50">Profil Desa</a>
+                <a href="pemerintahan.html" class="px-3 py-2 rounded-lg hover:bg-green-50 font-medium">Pemerintahan</a>
+                <a href="potensi-desa.html" class="px-3 py-2 rounded-lg hover:bg-green-50 font-medium">Potensi Desa</a>
+                <a href="kegiatan-kkn.html" class="px-3 py-2 rounded-lg hover:bg-green-50 font-medium">Kegiatan KKN</a>
+                <a href="galeri.html" class="px-3 py-2 rounded-lg hover:bg-green-50 font-medium">Galeri</a>
+                <a href="kontak.html" class="px-3 py-2 rounded-lg hover:bg-green-50 font-medium">Kontak</a>
             </div>
         </nav>
     </header>
 
-    <!-- Profil Desa -->
+    <!-- Page Header -->
+    <section class="hero-gradient text-white py-16">
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-2 animate-fadeInUp">Profil Desa Tampojung Tenggina</h2>
+            <p class="text-green-200 animate-fadeInUp delay-100">Sejarah, visi misi, data geografis, dan demografi desa.</p>
+        </div>
+    </section>
+
     <main class="container mx-auto py-12 px-4 flex-1">
-        <h2 class="text-3xl font-bold mb-2 text-green-700 text-center">Profil Desa [Nama Desa]</h2>
-        <p class="text-gray-500 mb-6 text-base text-center">Informasi lengkap tentang sejarah, visi misi, dan data singkat Desa [Nama Desa].</p>
-        <div class="md:flex md:gap-8 mb-8">
-            <img src="https://images.unsplash.com/photo-1526494631344-8c6fa6462b17?auto=format&fit=crop&w=300&q=80" alt="Peta Desa" class="rounded-lg shadow mb-6 md:mb-0">
-            <div>
-                <h3 class="text-2xl font-semibold mb-2">Tentang Desa</h3>
-                <p class="mb-2">Desa [Nama Desa] terletak di Kecamatan [X], Kabupaten [Y]. Memiliki jumlah penduduk sekitar [xxxx] jiwa. Potensi ekonomi desa meliputi pertanian, UMKM, dan pariwisata budaya yang berkembang.</p>
-                <p class="mb-2">Desa kami berkomitmen untuk membangun masyarakat yang mandiri, sejahtera, dan berdaya saing melalui berbagai program pembangunan dan pemberdayaan.</p>
+        <!-- Sejarah -->
+        <section id="sejarah" class="mb-12 animate-fadeInUp">
+            <h3 class="text-2xl font-bold mb-2 text-green-700 flex items-center gap-2">Sejarah Desa</h3>
+            <div class="section-divider" style="margin: 0 0 1rem 0;"></div>
+            <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    Desa <strong>Tampojung Tengginah</strong> pada awalnya berasal dari kata <em>"Kaponjung"</em> yang berarti <em>"keramat"</em>. Disebut keramat dikarenakan dari silsilah asal muasalnya konon datang seorang sesepuh pemuka Agama Islam dari salah satu dusun di Kecamatan Pademawu Pamekasan, yaitu dari Dusun Rabah yang datang ke Tampojung.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    Dari silsilah diketahui bahwa sesepuh tersebut merupakan keturunan dari Batu Ampar Timur Waru. Beliau datang ke Desa Tampojung Guwa untuk bertapa di salah satu gua yang ada di desa tersebut. Selama bertapa, beliau sepakat untuk menetap dan meninggal di Desa Tampojung Guwa.
+                </p>
+                <p class="text-gray-600 leading-relaxed">
+                    Selama berada di Desa Tampojung Guwa, beliau dianugerahi <strong>4 orang putera</strong>. Putera-putera beliau inilah yang kemudian menjadi pilar pemimpin dari setiap batasan desa, sehingga Desa Tampojung dipecah menjadi <strong>4 (empat) bagian</strong>, yaitu:
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-4">
+                    <div class="bg-green-50 rounded-xl p-4 text-center"><span class="font-bold text-green-700">1</span><p class="text-sm mt-1">Tampojung Tengah</p></div>
+                    <div class="bg-green-50 rounded-xl p-4 text-center"><span class="font-bold text-green-700">2</span><p class="text-sm mt-1">Tampojung Pregi</p></div>
+                    <div class="bg-amber-50 rounded-xl p-4 text-center border-2 border-amber-300"><span class="font-bold text-amber-700">3</span><p class="text-sm mt-1 font-bold">Tampojung Tengginah</p></div>
+                    <div class="bg-green-50 rounded-xl p-4 text-center"><span class="font-bold text-green-700">4</span><p class="text-sm mt-1">Tampojung Guwa</p></div>
+                </div>
             </div>
-        </div>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div>
-                <h4 class="text-xl font-semibold mb-2">Visi</h4>
-                <p class="mb-4 italic">"Mewujudkan Desa [Nama Desa] yang mandiri, sejahtera, dan berbudaya berbasis partisipasi masyarakat."</p>
-                <h4 class="text-xl font-semibold mb-2">Misi</h4>
-                <ul class="list-disc list-inside space-y-1">
-                    <li>Meningkatkan kualitas pendidikan dan kesehatan masyarakat.</li>
-                    <li>Mendorong pertumbuhan ekonomi berbasis potensi lokal.</li>
-                    <li>Melestarikan budaya dan lingkungan hidup desa.</li>
-                    <li>Meningkatkan pelayanan publik yang transparan dan akuntabel.</li>
-                </ul>
+        </section>
+
+        <!-- Visi Misi -->
+        <section id="visi-misi" class="mb-12 animate-fadeInUp">
+            <h3 class="text-2xl font-bold mb-2 text-green-700 flex items-center gap-2">Visi & Misi</h3>
+            <div class="section-divider" style="margin: 0 0 1rem 0;"></div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-gradient-to-br from-green-700 to-green-600 text-white rounded-2xl shadow-lg p-6 md:p-8">
+                    <h4 class="text-xl font-bold mb-4 flex items-center gap-2">
+                        <span class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-sm">V</span>
+                        Visi
+                    </h4>
+                    <p class="text-green-50 text-lg italic leading-relaxed">
+                        "Terwujudnya Desa Tampojung Tenggina yang Religius, Mandiri, Sejahtera, dan Berkeadilan."
+                    </p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                    <h4 class="text-xl font-bold mb-4 text-gray-800 flex items-center gap-2">
+                        <span class="w-8 h-8 rounded-full bg-green-100 text-green-700 flex items-center justify-center text-sm font-bold">M</span>
+                        Misi
+                    </h4>
+                    <ol class="space-y-3 text-gray-600">
+                        <li class="flex gap-3">
+                            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-green-100 text-green-700 flex items-center justify-center text-xs font-bold">1</span>
+                            <span>Meningkatkan tata kelola pemerintahan desa yang transparan, akuntabel, dan berorientasi pada pelayanan masyarakat yang prima.</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-green-100 text-green-700 flex items-center justify-center text-xs font-bold">2</span>
+                            <span>Mendorong pembangunan infrastruktur pedesaan yang merata guna memperlancar aksesibilitas dan perekonomian warga.</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-green-100 text-green-700 flex items-center justify-center text-xs font-bold">3</span>
+                            <span>Mengembangkan potensi perekonomian lokal, khususnya di sektor pertanian dan peternakan (seperti sapi potong), untuk kesejahteraan masyarakat.</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-green-100 text-green-700 flex items-center justify-center text-xs font-bold">4</span>
+                            <span>Meningkatkan kualitas sumber daya manusia (SDM) melalui dukungan di bidang pendidikan, kesehatan, dan penguatan nilai-nilai keagamaan.</span>
+                        </li>
+                    </ol>
+                </div>
             </div>
-            <div>
-                <h4 class="text-xl font-semibold mb-2">Data Singkat Desa</h4>
-                <table class="w-full text-sm">
-                    <tr>
-                        <td class="py-1 font-medium">Luas Wilayah</td>
-                        <td>: [xxxx] Ha</td>
-                    </tr>
-                    <tr>
-                        <td class="py-1 font-medium">Jumlah Penduduk</td>
-                        <td>: [xxxx] Jiwa</td>
-                    </tr>
-                    <tr>
-                        <td class="py-1 font-medium">Dusun</td>
-                        <td>: [x] Dusun</td>
-                    </tr>
-                    <tr>
-                        <td class="py-1 font-medium">RT/RW</td>
-                        <td>: [x]/[x]</td>
-                    </tr>
-                    <tr>
-                        <td class="py-1 font-medium">Kode Pos</td>
-                        <td>: [xxxxx]</td>
-                    </tr>
-                </table>
+        </section>
+
+        <!-- Geografis -->
+        <section id="geografis" class="mb-12 animate-fadeInUp">
+            <h3 class="text-2xl font-bold mb-2 text-green-700 flex items-center gap-2">Geografis</h3>
+            <div class="section-divider" style="margin: 0 0 1rem 0;"></div>
+            <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                <div class="md:flex md:gap-8">
+                    <div class="md:w-1/2 mb-6 md:mb-0">
+                        <iframe src="https://maps.google.com/maps?q=-6.99536,113.56901&z=13&output=embed" width="100%" height="300" class="rounded-xl shadow" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="md:w-1/2">
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Desa Tampojung Tenggina memiliki luas wilayah administratif <strong>1.876,15 km²</strong>. Desa ini berdiri di atas dataran tinggi dengan ketinggian <strong>100-500 mdpl</strong> dari permukaan laut. Suhu udara rata-rata mencapai <strong>35°C</strong>.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Secara klimatologis, desa ini merupakan daerah iklim tropis yang memiliki tingkat curah hujan sedang.
+                        </p>
+                        <h4 class="font-bold mb-3 text-gray-800">Batas Wilayah</h4>
+                        <table class="table-modern w-full">
+                            <thead><tr><th>Arah</th><th>Berbatasan Dengan</th></tr></thead>
+                            <tbody>
+                                <tr><td>Utara</td><td>Desa Sana Laok</td></tr>
+                                <tr><td>Timur</td><td>Desa Ragang</td></tr>
+                                <tr><td>Selatan</td><td>Desa Bajur</td></tr>
+                                <tr><td>Barat</td><td>Desa Tampojung Tengah</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Demografi -->
+        <section id="demografi" class="mb-12 animate-fadeInUp">
+            <h3 class="text-2xl font-bold mb-2 text-green-700 flex items-center gap-2">Demografi</h3>
+            <div class="section-divider" style="margin: 0 0 1rem 0;"></div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-2xl shadow-lg p-6">
+                    <h4 class="font-bold text-lg mb-4 text-gray-800">Penduduk Berdasarkan Jenis Kelamin (2026)</h4>
+                    <table class="table-modern w-full">
+                        <thead><tr><th>No</th><th>Uraian</th><th>Jumlah</th></tr></thead>
+                        <tbody>
+                            <tr><td>1</td><td>Laki-laki</td><td class="font-bold">1.517 jiwa</td></tr>
+                            <tr><td>2</td><td>Perempuan</td><td class="font-bold">1.550 jiwa</td></tr>
+                            <tr class="bg-green-50"><td colspan="2" class="font-bold">Total</td><td class="font-bold text-green-700">3.067 jiwa</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg p-6">
+                    <h4 class="font-bold text-lg mb-4 text-gray-800">Mata Pencaharian (2026)</h4>
+                    <div class="space-y-3">
+                        <div><div class="flex justify-between text-sm mb-1"><span>Petani</span><span class="font-bold">2.700 jiwa</span></div><div class="h-3 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-green-600 to-green-400 rounded-full" style="width: 88%"></div></div></div>
+                        <div><div class="flex justify-between text-sm mb-1"><span>Tukang</span><span class="font-bold">150 jiwa</span></div><div class="h-3 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-orange-500 to-orange-300 rounded-full" style="width: 5%"></div></div></div>
+                        <div><div class="flex justify-between text-sm mb-1"><span>Swasta</span><span class="font-bold">100 jiwa</span></div><div class="h-3 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-blue-500 to-blue-300 rounded-full" style="width: 3%"></div></div></div>
+                        <div><div class="flex justify-between text-sm mb-1"><span>Jasa</span><span class="font-bold">60 jiwa</span></div><div class="h-3 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-500 to-purple-300 rounded-full" style="width: 2%"></div></div></div>
+                        <div><div class="flex justify-between text-sm mb-1"><span>Karyawan</span><span class="font-bold">42 jiwa</span></div><div class="h-3 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-teal-500 to-teal-300 rounded-full" style="width: 1%"></div></div></div>
+                        <div><div class="flex justify-between text-sm mb-1"><span>Pedagang</span><span class="font-bold">15 jiwa</span></div><div class="h-3 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-gray-500 to-gray-300 rounded-full" style="width: 0.5%"></div></div></div>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-4 italic">*Catatan: Sebagian besar penduduk berprofesi sebagai Petani, namun mayoritas setiap rumah tangga juga memelihara 2-4 ekor sapi sebagai tabungan dan mata pencaharian sekunder.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lembaga Desa -->
+        <section id="lembaga" class="mb-12 animate-fadeInUp">
+            <h3 class="text-2xl font-bold mb-2 text-green-700 flex items-center gap-2">Lembaga Desa</h3>
+            <div class="section-divider" style="margin: 0 0 1rem 0;"></div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="glass-card card-hover p-5">
+                    <svg class="w-8 h-8 mb-3 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    <h4 class="font-bold mb-2">BPD</h4>
+                    <p class="text-sm text-gray-600">Badan Permusyawaratan Desa — lembaga perwakilan masyarakat yang mengawasi penyelenggaraan pemerintahan desa.</p>
+                </div>
+                <div class="glass-card card-hover p-5">
+                    <svg class="w-8 h-8 mb-3 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    <h4 class="font-bold mb-2">LPMD</h4>
+                    <p class="text-sm text-gray-600">Lembaga Pemberdayaan Masyarakat Desa — menggerakkan dan membina partisipasi masyarakat dalam pembangunan.</p>
+                </div>
+                <div class="glass-card card-hover p-5">
+                    <svg class="w-8 h-8 mb-3 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <h4 class="font-bold mb-2">BUMDes</h4>
+                    <p class="text-sm text-gray-600">Badan Usaha Milik Desa — meningkatkan perekonomian melalui pengembangan usaha dan potensi lokal.</p>
+                </div>
+                <div class="glass-card card-hover p-5">
+                    <svg class="w-8 h-8 mb-3 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                    <h4 class="font-bold mb-2">RT/RW</h4>
+                    <p class="text-sm text-gray-600">Menjaga keamanan lingkungan dan kesejahteraan masyarakat di tingkat rukun tetangga dan rukun warga.</p>
+                </div>
+                <div class="glass-card card-hover p-5">
+                    <svg class="w-8 h-8 mb-3 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477-4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    <h4 class="font-bold mb-2">Lembaga Adat</h4>
+                    <p class="text-sm text-gray-600">Termasuk Lembaga Adat <strong>Rokad Thisah</strong> yang menjaga kearifan lokal, tradisi, dan tata tertib masyarakat.</p>
+                </div>
+                <div class="glass-card card-hover p-5">
+                    <svg class="w-8 h-8 mb-3 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    <h4 class="font-bold mb-2">Data Singkat</h4>
+                    <div class="text-sm text-gray-600 space-y-1">
+                        <p><strong>Kode Kemendagri:</strong> 35.28.10.2006</p>
+                        <p><strong>Provinsi:</strong> Jawa Timur</p>
+                        <p><strong>Kabupaten:</strong> Pamekasan</p>
+                        <p><strong>Kecamatan:</strong> Waru</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-green-700 text-white py-6 mt-8">
-        <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between px-4">
-            <div class="flex items-center space-x-2 mb-2 md:mb-0">
-                <img src="https://images.unsplash.com/photo-1558005530-a7958896ec60?auto=format&fit=crop&w=32&q=80" alt="Logo Pemda" class="h-8 w-8 rounded-full">
-                <span class="font-semibold">Pemerintah Kabupaten [Y]</span>
+    <footer class="bg-gradient-to-br from-green-800 to-green-900 text-white pt-10 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-3">
+                    <div class="h-8 w-8 rounded-full bg-white/20 flex items-center justify-center font-bold text-xs">TT</div>
+                    <span class="font-semibold text-sm">Desa Tampojung Tenggina</span>
+                </div>
+                <p class="text-sm text-green-300">&copy; 2026 Desa Tampojung Tenggina. Luaran KKN — Teknologi Tepat Guna.</p>
             </div>
-            <div class="flex space-x-4 mb-2 md:mb-0">
-                <a href="#" class="hover:underline">Instagram</a>
-                <a href="#" class="hover:underline">Facebook</a>
-                <a href="#" class="hover:underline">YouTube</a>
-            </div>
-            <div class="text-sm">&copy; 2025 Desa [Nama Desa]. All rights reserved.</div>
         </div>
     </footer>
     <script src="script.js"></script>
 </body>
-
 </html>

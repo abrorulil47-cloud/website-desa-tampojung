@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potensi Desa | Desa Tampojung Tenggina</title>
+    <meta name="description" content="Potensi pertanian, peternakan, dan perikanan Desa Tampojung Tenggina, Kecamatan Waru, Kabupaten Pamekasan.">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-white shadow sticky top-0 z-50">
+        <div class="container mx-auto flex items-center justify-between py-3 px-6">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <div class="h-12 w-12 rounded-full bg-gradient-to-br from-green-700 to-green-500 flex items-center justify-center text-white font-bold text-lg shadow-lg">TT</div>
+                <div><h1 class="text-lg font-bold text-gray-800 group-hover:text-green-700 transition-colors">Desa Tampojung Tenggina</h1><p class="text-xs text-gray-500">Kec. Waru, Kab. Pamekasan</p></div>
+            </a>
+            <button id="menu-toggle" class="lg:hidden flex items-center px-3 py-2 border rounded text-green-700 border-green-700" aria-label="Toggle Menu"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+            <nav class="hidden lg:flex items-center gap-1">
+                <a href="index.html" class="px-3 py-2 rounded-lg hover:text-green-600 hover:bg-green-50 font-medium text-sm">Beranda</a>
+                <a href="profil.html" class="px-3 py-2 rounded-lg hover:text-green-600 hover:bg-green-50 font-medium text-sm">Profil Desa</a>
+                <a href="pemerintahan.html" class="px-3 py-2 rounded-lg hover:text-green-600 hover:bg-green-50 font-medium text-sm">Pemerintahan</a>
+                <a href="potensi-desa.html" class="px-3 py-2 rounded-lg text-green-700 font-bold bg-green-50 text-sm">Potensi Desa</a>
+                <a href="kegiatan-kkn.html" class="px-3 py-2 rounded-lg hover:text-green-600 hover:bg-green-50 font-medium text-sm">Kegiatan KKN</a>
+                <a href="galeri.html" class="px-3 py-2 rounded-lg hover:text-green-600 hover:bg-green-50 font-medium text-sm">Galeri</a>
+                <a href="kontak.html" class="px-3 py-2 rounded-lg hover:text-green-600 hover:bg-green-50 font-medium text-sm">Kontak</a>
+            </nav>
+        </div>
+        <nav id="mobile-menu" class="lg:hidden fixed top-0 left-0 w-full h-full bg-black/50 z-50 hidden">
+            <div class="bg-white w-4/5 max-w-xs h-full shadow-lg p-6 flex flex-col gap-3 animate-slideInLeft">
+                <button id="menu-close" class="self-end mb-2 text-gray-700 p-1" aria-label="Tutup Menu"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+                <a href="index.html" class="px-3 py-2 rounded-lg hover:bg-green-50 font-medium">Beranda</a>
+                <a href="profil.html" class="px-3 py-2 rounded-lg hover:bg-green-50 font-medium">Profil Desa</a>
+                <a href="pemerintahan.html" class="px-3 py-2 rounded-lg hover:bg-green-50 font-medium">Pemerintahan</a>
+                <a href="potensi-desa.html" class="px-3 py-2 rounded-lg text-green-700 font-bold bg-green-50">Potensi Desa</a>
+                <a href="kegiatan-kkn.html" class="px-3 py-2 rounded-lg hover:bg-green-50 font-medium">Kegiatan KKN</a>
+                <a href="galeri.html" class="px-3 py-2 rounded-lg hover:bg-green-50 font-medium">Galeri</a>
+                <a href="kontak.html" class="px-3 py-2 rounded-lg hover:bg-green-50 font-medium">Kontak</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero-gradient text-white py-16">
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-2 animate-fadeInUp">Potensi Desa</h2>
+            <p class="text-green-200 animate-fadeInUp delay-100">Pertanian, peternakan, perkebunan, dan sumber daya alam.</p>
+        </div>
+    </section>
+
+    <main class="container mx-auto py-12 px-4 flex-1">
+        <!-- Overview -->
+        <section class="mb-12 animate-fadeInUp">
+            <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                <p class="text-gray-600 leading-relaxed">
+                    Potensi perekonomian Desa Tampojung Tenggina sangat bergantung pada sektor <strong>pertanian</strong>. Masyarakat menghasilkan berbagai produk pertanian seperti padi dan tembakau. Di musim hujan, masyarakat menanam padi. Di musim kemarau, mayoritas petani menanam tembakau dengan harapan kualitas tinggi dan harga jual yang menguntungkan. Selain pertanian, sektor <strong>peternakan</strong> juga menjadi andalan ekonomi masyarakat.
+                </p>
+            </div>
+        </section>
+
+        <!-- Pertanian -->
+        <section id="pertanian" class="mb-12 animate-fadeInUp">
+            <h3 class="text-2xl font-bold mb-2 text-green-700 flex items-center gap-3">
+                <img src="Galeri/icon-pertanian.png" class="w-10 h-10 object-contain drop-shadow-sm" alt="Ikon Pertanian">
+                Potensi Pertanian
+            </h3>
+            <div class="section-divider" style="margin: 0 0 1rem 0;"></div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-2xl shadow-lg p-6">
+                    <h4 class="font-bold text-lg mb-4">Tanaman Pangan</h4>
+                    <table class="table-modern w-full">
+                        <thead><tr><th>Komoditas</th><th>Produksi (Ton/Tahun)</th></tr></thead>
+                        <tbody>
+                            <tr><td>Padi</td><td class="font-bold">98</td></tr>
+                            <tr><td>Jagung</td><td class="font-bold">85</td></tr>
+                            <tr><td>Ubi Kayu</td><td class="font-bold">4</td></tr>
+                            <tr><td>Ubi Jalar</td><td class="font-bold">0,8</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg p-6">
+                    <h4 class="font-bold text-lg mb-4">Buah-buahan & Perkebunan</h4>
+                    <table class="table-modern w-full">
+                        <thead><tr><th>Komoditas</th><th>Produksi (Ton/Tahun)</th></tr></thead>
+                        <tbody>
+                            <tr><td>Mangga</td><td class="font-bold">0,9</td></tr>
+                            <tr><td>Jeruk</td><td class="font-bold">0,3</td></tr>
+                            <tr><td>Tomat</td><td class="font-bold">0,3</td></tr>
+                            <tr><td>Kelapa</td><td class="font-bold">0,7</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="bg-green-50 rounded-2xl p-6 mt-6">
+                <h4 class="font-bold text-lg mb-3 text-green-800">Tembakau — Komoditas Unggulan Musim Kemarau</h4>
+                <p class="text-gray-600">Di musim kemarau, mayoritas petani Tampojung Tenggina memanfaatkan lahannya untuk menanam <strong>tembakau</strong>. Petani berharap kualitas tembakau yang tinggi dengan harga jual yang menguntungkan. Tembakau merupakan salah satu komoditas paling penting bagi perekonomian desa.</p>
+            </div>
+        </section>
+
+        <!-- Peternakan -->
+        <section id="peternakan" class="mb-12 animate-fadeInUp">
+            <h3 class="text-2xl font-bold mb-2 text-green-700 flex items-center gap-3">
+                <img src="Galeri/icon-sapi.png" class="w-10 h-10 object-contain drop-shadow-sm" alt="Ikon Peternakan">
+                Potensi Peternakan
+            </h3>
+            <div class="section-divider" style="margin: 0 0 1rem 0;"></div>
+            <div class="bg-white rounded-2xl shadow-lg p-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <div class="text-center p-6 bg-green-50 rounded-xl">
+                        <img src="Galeri/icon-sapi.png" class="w-16 h-16 mx-auto mb-3 object-contain drop-shadow-md" alt="Ikon Sapi">
+                        <h4 class="font-bold text-xl text-green-800 mb-1">Sapi (Skala Rumahan)</h4>
+                        <p class="text-sm text-gray-600">Sebagian besar warga memiliki sapi sebagai tabungan dan pekerjaan sampingan. Mayoritas setiap rumah memelihara sekitar <strong>2 hingga 4 ekor sapi</strong>.</p>
+                    </div>
+                    <div class="text-center p-6 bg-amber-50 rounded-xl">
+                        <img src="Galeri/icon-ayam.png" class="w-16 h-16 mx-auto mb-3 object-contain drop-shadow-md" alt="Ikon Ayam">
+                        <h4 class="font-bold text-xl text-amber-800 mb-1">Unggas (Skala Rumahan)</h4>
+                        <p class="text-sm text-gray-600">Ayam dan bebek dipelihara warga hanya dalam skala kecil (sekitar <strong>10 ekor per rumah</strong>) untuk kebutuhan rumah tangga, bukan peternakan skala besar.</p>
+                    </div>
+                </div>
+                <p class="text-gray-600">Mata pencaharian utama warga adalah di sektor pertanian. Namun, kepemilikan <strong>sapi</strong> di hampir setiap rumah tangga menjadi ciri khas tabungan tradisional dan penggerak ekonomi sekunder masyarakat Desa Tampojung Tenggina.</p>
+            </div>
+        </section>
+
+        <!-- Penggunaan Lahan -->
+        <section class="mb-12 animate-fadeInUp">
+            <h3 class="text-2xl font-bold mb-2 text-green-700 flex items-center gap-2">Penggunaan Lahan</h3>
+            <div class="section-divider" style="margin: 0 0 1rem 0;"></div>
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <table class="table-modern">
+                    <thead><tr><th>No</th><th>Penggunaan Lahan</th><th>Luas (Ha)</th></tr></thead>
+                    <tbody>
+                        <tr><td colspan="3" class="font-bold bg-green-50 text-green-800">Lahan Sawah</td></tr>
+                        <tr><td>1</td><td>Irigasi Teknis</td><td>19</td></tr>
+                        <tr><td>2</td><td>Tadah Hujan</td><td>4,5</td></tr>
+                        <tr><td colspan="3" class="font-bold bg-amber-50 text-amber-800">Lahan Bukan Sawah</td></tr>
+                        <tr><td>3</td><td>Tegal/Kebun</td><td class="font-bold">15.634</td></tr>
+                        <tr><td>4</td><td>Ladang/Huma</td><td class="font-bold">15.272</td></tr>
+                        <tr><td>5</td><td>Pekarangan/Bangunan</td><td>2.456</td></tr>
+                        <tr><td>6</td><td>Perkebunan</td><td>20,7</td></tr>
+                        <tr><td>7</td><td>Tanah Wakaf</td><td>11,2</td></tr>
+                        <tr><td>8</td><td>Pertokoan/Perdagangan</td><td>7,5</td></tr>
+                        <tr><td>9</td><td>Kehutanan</td><td>6,25</td></tr>
+                        <tr><td>10</td><td>Kolam/Empang</td><td>1,5</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gradient-to-br from-green-800 to-green-900 text-white pt-10 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-3"><div class="h-8 w-8 rounded-full bg-white/20 flex items-center justify-center font-bold text-xs">TT</div><span class="font-semibold text-sm">Desa Tampojung Tenggina</span></div>
+                <p class="text-sm text-green-300">&copy; 2026 Desa Tampojung Tenggina. Luaran KKN — Teknologi Tepat Guna.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,112 +1,209 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeri Desa | Desa [Nama Desa]</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Galeri Desa | Desa Tampojung Tenggina</title>
+    <meta name="description" content="Galeri foto dan video kegiatan Desa Tampojung Tenggina dan program KKN.">
     <link href="style.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
     <!-- Header -->
     <header class="bg-white shadow sticky top-0 z-50">
-        <div class="container mx-auto flex items-center justify-between py-4 px-6">
-            <div class="flex items-center space-x-3">
-                <img src="https://images.unsplash.com/photo-1558005530-a7958896ec60?auto=format&fit=crop&w=48&q=80" alt="Logo Desa" class="h-12 w-12 rounded-full">
+        <div class="container mx-auto flex items-center justify-between py-3 px-6">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <div
+                    class="h-12 w-12 rounded-full bg-gradient-to-br from-green-700 to-green-500 flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                    TT</div>
                 <div>
-                    <h1 class="text-xl font-bold">Desa [Nama Desa]</h1>
-                    <p class="text-sm text-gray-500">Bersama membangun desa yang mandiri dan sejahtera</p>
+                    <h1 class="text-lg font-bold text-gray-800 group-hover:text-green-700 transition-colors">Desa
+                        Tampojung Tenggina</h1>
+                    <p class="text-xs text-gray-500">Kec. Waru, Kab. Pamekasan</p>
                 </div>
-            </div>
-            <button id="menu-toggle" class="lg:hidden flex items-center px-3 py-2 border rounded text-green-700 border-green-700 focus:outline-none" aria-label="Toggle Menu">
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-            <nav class="hidden lg:flex gap-6">
-                <a href="index.html" class="hover:text-green-600 font-medium">Beranda</a>
-                <a href="profil.html" class="hover:text-green-600 font-medium">Profil Desa</a>
-                <a href="pemerintahan.html" class="hover:text-green-600 font-medium">Pemerintahan</a>
-                <a href="layanan-publik.html" class="hover:text-green-600 font-medium">Layanan Publik</a>
-                <a href="berita-pengumuman.html" class="hover:text-green-600 font-medium">Berita & Pengumuman</a>
-                <a href="galeri.html" class="hover:text-green-600 font-medium text-green-700 font-bold">Galeri</a>
-                <a href="kontak.html" class="hover:text-green-600 font-medium">Kontak</a>
+            </a>
+            <button id="menu-toggle"
+                class="lg:hidden flex items-center px-3 py-2 border rounded text-green-700 border-green-700"
+                aria-label="Toggle Menu"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg></button>
+            <nav class="hidden lg:flex items-center gap-1">
+                <a href="index.html"
+                    class="px-3 py-2 rounded-lg hover:text-green-600 hover:bg-green-50 font-medium text-sm">Beranda</a>
+                <a href="profil.html"
+                    class="px-3 py-2 rounded-lg hover:text-green-600 hover:bg-green-50 font-medium text-sm">Profil
+                    Desa</a>
+                <a href="pemerintahan.html"
+                    class="px-3 py-2 rounded-lg hover:text-green-600 hover:bg-green-50 font-medium text-sm">Pemerintahan</a>
+                <a href="potensi-desa.html"
+                    class="px-3 py-2 rounded-lg hover:text-green-600 hover:bg-green-50 font-medium text-sm">Potensi
+                    Desa</a>
+                <a href="kegiatan-kkn.html"
+                    class="px-3 py-2 rounded-lg hover:text-green-600 hover:bg-green-50 font-medium text-sm">Kegiatan
+                    KKN</a>
+                <a href="galeri.html"
+                    class="px-3 py-2 rounded-lg text-green-700 font-bold bg-green-50 text-sm">Galeri</a>
+                <a href="kontak.html"
+                    class="px-3 py-2 rounded-lg hover:text-green-600 hover:bg-green-50 font-medium text-sm">Kontak</a>
             </nav>
         </div>
-        <nav id="mobile-menu" class="lg:hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50 hidden">
-            <div class="bg-white w-4/5 max-w-xs h-full shadow-lg p-6 flex flex-col gap-4 animate-slideInLeft">
-                <button id="menu-close" class="self-end mb-4 text-gray-700" aria-label="Tutup Menu">
-                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-                <a href="index.html" class="hover:text-green-600 font-medium">Beranda</a>
-                <a href="profil.html" class="hover:text-green-600 font-medium">Profil Desa</a>
-                <a href="pemerintahan.html" class="hover:text-green-600 font-medium">Pemerintahan</a>
-                <a href="layanan-publik.html" class="hover:text-green-600 font-medium">Layanan Publik</a>
-                <a href="berita-pengumuman.html" class="hover:text-green-600 font-medium">Berita & Pengumuman</a>
-                <a href="galeri.html" class="hover:text-green-600 font-medium text-green-700 font-bold">Galeri</a>
-                <a href="kontak.html" class="hover:text-green-600 font-medium">Kontak</a>
+        <nav id="mobile-menu" class="lg:hidden fixed top-0 left-0 w-full h-full bg-black/50 z-50 hidden">
+            <div class="bg-white w-4/5 max-w-xs h-full shadow-lg p-6 flex flex-col gap-3 animate-slideInLeft">
+                <button id="menu-close" class="self-end mb-2 text-gray-700 p-1" aria-label="Tutup Menu"><svg
+                        class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg></button>
+                <a href="index.html" class="px-3 py-2 rounded-lg hover:bg-green-50 font-medium">Beranda</a>
+                <a href="profil.html" class="px-3 py-2 rounded-lg hover:bg-green-50 font-medium">Profil Desa</a>
+                <a href="pemerintahan.html" class="px-3 py-2 rounded-lg hover:bg-green-50 font-medium">Pemerintahan</a>
+                <a href="potensi-desa.html" class="px-3 py-2 rounded-lg hover:bg-green-50 font-medium">Potensi Desa</a>
+                <a href="kegiatan-kkn.html" class="px-3 py-2 rounded-lg hover:bg-green-50 font-medium">Kegiatan KKN</a>
+                <a href="galeri.html" class="px-3 py-2 rounded-lg text-green-700 font-bold bg-green-50">Galeri</a>
+                <a href="kontak.html" class="px-3 py-2 rounded-lg hover:bg-green-50 font-medium">Kontak</a>
             </div>
         </nav>
     </header>
-    <main class="container mx-auto py-12 px-4 flex-1">
-        <h2 class="text-3xl font-bold mb-2 text-green-700 text-center">Galeri Desa</h2>
-        <p class="text-gray-500 mb-8 text-center text-base">Dokumentasi foto dan video kegiatan serta keindahan desa.</p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
-            <div class="aspect-[4/3] bg-gray-200 rounded shadow overflow-hidden">
-                <img src="https://picsum.photos/id/159/400/300" alt="Galeri 1" class="object-cover w-full h-full">
-            </div>
-            <div class="aspect-[4/3] bg-gray-200 rounded shadow overflow-hidden">
-                <img src="https://picsum.photos/id/108/400/300" alt="Galeri 2" class="object-cover w-full h-full">
-            </div>
-            <div class="aspect-[4/3] bg-gray-200 rounded shadow overflow-hidden">
-                <img src="https://picsum.photos/id/109/400/300" alt="Galeri 3" class="object-cover w-full h-full">
-            </div>
-            <div class="aspect-[4/3] bg-gray-200 rounded shadow overflow-hidden">
-                <img src="https://picsum.photos/id/110/400/300" alt="Galeri 4" class="object-cover w-full h-full">
-            </div>
-            <div class="aspect-[4/3] bg-gray-200 rounded shadow overflow-hidden">
-                <img src="https://picsum.photos/id/112/400/300" alt="Galeri 5" class="object-cover w-full h-full">
-            </div>
-            <div class="aspect-[4/3] bg-gray-200 rounded shadow overflow-hidden">
-                <img src="https://picsum.photos/id/114/400/300" alt="Galeri 6" class="object-cover w-full h-full">
-            </div>
-            <div class="aspect-[4/3] bg-gray-200 rounded shadow overflow-hidden">
-                <img src="https://picsum.photos/id/120/400/300" alt="Galeri 7" class="object-cover w-full h-full">
-            </div>
-            <div class="aspect-[4/3] bg-gray-200 rounded shadow overflow-hidden">
-                <img src="https://picsum.photos/id/124/400/300" alt="Galeri 8" class="object-cover w-full h-full">
-            </div>
-            <div class="aspect-[4/3] bg-gray-200 rounded shadow overflow-hidden">
-                <img src="https://picsum.photos/id/127/400/300" alt="Galeri 9" class="object-cover w-full h-full">
-            </div>
+
+    <section class="hero-gradient text-white py-16">
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-2 animate-fadeInUp">Galeri Desa</h2>
+            <p class="text-green-200 animate-fadeInUp delay-100">Dokumentasi foto dan video kegiatan desa & KKN.</p>
         </div>
-            <div class="flex justify-center mt-8">
-                <nav class="inline-flex rounded-md shadow-sm" aria-label="Pagination">
-                    <a href="#" class="px-3 py-1 border border-gray-300 bg-white text-gray-700 hover:bg-green-100 rounded-l">&laquo;</a>
-                    <a href="#" class="px-3 py-1 border-t border-b border-gray-300 bg-green-700 text-white font-bold">1</a>
-                    <a href="#" class="px-3 py-1 border-t border-b border-gray-300 bg-white text-gray-700 hover:bg-green-100">2</a>
-                    <a href="#" class="px-3 py-1 border-t border-b border-gray-300 bg-white text-gray-700 hover:bg-green-100">3</a>
-                    <a href="#" class="px-3 py-1 border border-gray-300 bg-white text-gray-700 hover:bg-green-100 rounded-r">&raquo;</a>
-                </nav>
+    </section>
+
+    <main class="container mx-auto py-12 px-4 flex-1">
+        <!-- Video Section -->
+        <section class="mb-12 animate-fadeInUp">
+            <h3 class="text-2xl font-bold mb-2 text-green-700 flex items-center gap-2">Video Profil Desa</h3>
+            <div class="section-divider" style="margin: 0 0 1rem 0;"></div>
+            <div class="max-w-3xl mx-auto">
+                <div
+                    class="video-placeholder aspect-video rounded-2xl flex items-center justify-center bg-gradient-to-br from-green-900 to-gray-800 shadow-2xl">
+                    <div class="text-center z-10 relative">
+                        <div
+                            class="w-20 h-20 mx-auto rounded-full bg-green-600/90 flex items-center justify-center mb-4 shadow-lg">
+                            <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                        </div>
+                        <p class="text-white font-medium">Video Profil Desa</p>
+                        <p class="text-green-300 text-sm mt-1">(Video akan ditambahkan segera)</p>
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <!-- Photo Gallery -->
+        <section class="mb-12 animate-fadeInUp">
+            <h3 class="text-2xl font-bold mb-2 text-green-700 flex items-center gap-2">Galeri Foto</h3>
+            <div class="section-divider" style="margin: 0 0 1rem 0;"></div>
+
+            <!-- Category: Kegiatan KKN -->
+            <h4 class="font-bold text-lg mb-4 text-gray-700">Kegiatan KKN</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+                <div class="aspect-[4/3] bg-gray-100 rounded-2xl shadow overflow-hidden relative card-hover group">
+                    <img src="Galeri/mengajar.jpg" alt="Kegiatan Mengajar"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-medium text-sm">Kegiatan Mengajar</p>
+                    </div>
+                </div>
+                <div class="aspect-[4/3] bg-gray-100 rounded-2xl shadow overflow-hidden relative card-hover group">
+                    <img src="Galeri/Pembuatan pupuk.jpg" alt="Pembuatan Pupuk"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-medium text-sm">Pembuatan Pupuk Organik</p>
+                    </div>
+                </div>
+                <div class="aspect-[4/3] bg-gray-100 rounded-2xl shadow overflow-hidden relative card-hover group">
+                    <img src="Galeri/cekkesehatan.jpg" alt="Cek Kesehatan"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-medium text-sm">Cek Kesehatan Gratis</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Suasana Desa -->
+            <h4 class="font-bold text-lg mb-4 text-gray-700">Suasana Desa</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+                <div class="aspect-[4/3] bg-gray-100 rounded-2xl shadow overflow-hidden relative card-hover group">
+                    <img src="Galeri/pemandangan.jpg" alt="Pemandangan Desa"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-medium text-sm">Pemandangan Desa</p>
+                    </div>
+                </div>
+                <div class="aspect-[4/3] bg-gray-100 rounded-2xl shadow overflow-hidden relative card-hover group">
+                    <img src="Galeri/membantuwargamenyiramtembakau.jpg" alt="Aktivitas Petani"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-medium text-sm">Aktivitas Petani Tembakau</p>
+                    </div>
+                </div>
+                <div class="aspect-[4/3] bg-gray-100 rounded-2xl shadow overflow-hidden relative card-hover group">
+                    <img src="Galeri/Puskesmas.jpg" alt="Puskesmas Desa"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-medium text-sm">Puskesmas Tampojung Tenggina</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Kegiatan Masyarakat -->
+            <h4 class="font-bold text-lg mb-4 text-gray-700">Kegiatan Masyarakat</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="aspect-[4/3] bg-gray-100 rounded-2xl shadow overflow-hidden relative card-hover group">
+                    <img src="Galeri/pendekatanwarga_menyiramtembakau.jpg" alt="Kegiatan Pertanian"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-medium text-sm">Pendekatan Bersama Warga</p>
+                    </div>
+                </div>
+                <div class="aspect-[4/3] bg-gray-100 rounded-2xl shadow overflow-hidden relative card-hover group">
+                    <img src="Galeri/Edukasi SMP.jpeg" alt="Edukasi SMP"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-medium text-sm">Kegiatan Pendidikan SMP</p>
+                    </div>
+                </div>
+                <div class="aspect-[4/3] bg-gray-100 rounded-2xl shadow overflow-hidden relative card-hover group">
+                    <img src="Galeri/puskesmas1.jpg" alt="Fasilitas Kesehatan"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-medium text-sm">Fasilitas Kesehatan Desa</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer class="bg-green-700 text-white py-6 mt-8">
-        <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between px-4">
-            <div class="flex items-center space-x-2 mb-2 md:mb-0">
-                <img src="https://images.unsplash.com/photo-1558005530-a7958896ec60?auto=format&fit=crop&w=32&q=80" alt="Logo Pemda" class="h-8 w-8 rounded-full">
-                <span class="font-semibold">Pemerintah Kabupaten [Y]</span>
+
+    <footer class="bg-gradient-to-br from-green-800 to-green-900 text-white pt-10 pb-6 mt-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-3">
+                    <div class="h-8 w-8 rounded-full bg-white/20 flex items-center justify-center font-bold text-xs">TT
+                    </div><span class="font-semibold text-sm">Desa Tampojung Tenggina</span>
+                </div>
+                <p class="text-sm text-green-300">&copy; 2026 Desa Tampojung Tenggina. Luaran KKN — Teknologi Tepat
+                    Guna.</p>
             </div>
-            <div class="flex space-x-4 mb-2 md:mb-0">
-                <a href="#" class="hover:underline">Instagram</a>
-                <a href="#" class="hover:underline">Facebook</a>
-                <a href="#" class="hover:underline">YouTube</a>
-            </div>
-            <div class="text-sm">&copy; 2025 Desa [Nama Desa]. All rights reserved.</div>
         </div>
     </footer>
     <script src="script.js"></script>
 </body>
+
 </html>
